@@ -1,0 +1,49 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+    <constant name="struts.devMode" value="true"/>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="gestionCommandes"  class="com.tb.action.ListeCommandesAction" method="getlistecommandes">
+            <result name="success">/listeCommandes.jsp</result>
+            <result name="input">/listeCommandes.jsp</result>
+        </action> 
+        <action name="MngLignesCommandes"  class="com.tb.action.ListeCommandesAction" method="updateLignesCommande">
+            <result name="success">/formLigneCommandeU.jsp</result>
+            <result name="input">/formLigneCommandeU.jsp</result>
+        </action>   
+        <action name="DCommande"  class="com.tb.action.CommandeAction" method="DeleteCommande">
+            <result name="success">/ListeCommandes.jsp</result>
+            <result name="input">/ListeCommandes.jsp</result>
+        </action>    
+        <action name="UCommande"  class="com.tb.action.CommandeAction" method="UpdateCommandePrepare">
+            <result name="success">/formCommandeU.jsp</result>
+            <result name="input">/formCommandeU.jsp</result>
+        </action>    
+        <action name="upCommande"  class="com.tb.action.CommandeAction" method="updateCommande">
+            <result name="success">/formLigneCommandeU.jsp</result>
+            <result name="input">/formCommandeU.jsp</result>
+        </action>    
+        <action name="CCommande"  class="com.tb.action.CommandeAction" method="CreateCommandePrepare">
+            <result name="success">/formCommandeC.jsp</result>
+            <result name="input">/formCommandeC.jsp</result>
+        </action>    
+        <action name="crCommande"  class="com.tb.action.CommandeAction" method="createCommande">
+            <result name="success">/formLigneCommandeU.jsp</result>
+            <result name="input">/formCommandeC.jsp</result>
+        </action> 
+        
+        <action name="DLigneCommande"  class="com.tb.action.LigneCommandeAction" method="DeleteLigneCommande">
+            <result name="success">/formLigneCommandeU.jsp</result>
+            <result name="input">/formLigneCommandeU.jsp</result>
+        </action> 
+        <action name="CLigneCommande"  class="com.tb.action.LigneCommandeAction" method="CreateLigneCommande">
+            <result name="success">/formLigneCommandeU.jsp</result>
+            <result name="input">/formLigneCommandeU.jsp</result>
+        </action>     
+    </package>
+
+</struts>

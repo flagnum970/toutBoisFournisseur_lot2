@@ -1,0 +1,20 @@
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+	"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+    <field name="date_com">
+        <field-validator type="date" >            
+            <message>Veuillez saisir une date de commande valide</message>
+        </field-validator>
+    </field>
+    <field name="date_com">
+        <field-validator type="required" >
+            <message>La date de la commande est obligatoire</message>
+        </field-validator>
+    </field>
+    <field name="date_livr">
+        <field-validator type="date" >            
+            <message>Veuillez saisir une date de livraison valide</message>
+        </field-validator>
+    </field>
+</validators>
